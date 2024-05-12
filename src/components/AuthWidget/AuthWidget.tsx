@@ -6,7 +6,6 @@ import RegistrationPage from '../RegistrationPage/RegistrationPage';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import LoginPage from '../LoginPage/LoginPage';
 import styles from './styles.module.css';
-import { is } from '@babel/types';
 const AuthWidget = () => {
     const BASE_API_URL = import.meta.env.VITE_BASE_API_URL;
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,7 +24,7 @@ const AuthWidget = () => {
                     setIsLoggedIn(false);
                 }
             });
-    }, [token]);
+    }, [token, BASE_API_URL]);
 
     const router = createBrowserRouter([
         {
