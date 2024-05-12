@@ -42,7 +42,8 @@ const LoginPage = ({ setToken }: LoginPageProps) => {
                 <input type="password" name="password" id="password" />
                 <button type="submit">Login</button>
             </form>
-            <p>Not a user? <a href="/register">Register</a></p>
+            <p>Not a user?</p>
+            <button onClick={() => window.location.href = '/register'}>Register</button>
         </div>
 
     )

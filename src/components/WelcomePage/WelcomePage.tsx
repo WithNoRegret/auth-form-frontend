@@ -4,9 +4,9 @@ const WelcomePage = () => {
     return (
         <div className={styles.body}>
             <h1>WelcomePage</h1>
-            <a href='/login'>Login</a>
+            <button onClick={() => window.location.href = '/login'}>Login</button>
             <br />
-            <a href='/register'> Register</a>
+            <button onClick={() => window.location.href = '/register'}>Register</button>
         </div>
 
     )

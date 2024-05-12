@@ -11,7 +11,8 @@ const RegistrationPage = () => {
                 <input type="password" name="password" id="password" required />
                 <button type="submit">Register</button>
             </form>
-            <p>Already a user? <a href="/login">Login</a></p>
+            <p>Already a user?</p>
+            <button onClick={() => window.location.href = '/login'}>Login</button>
         </div>
     )
 }
