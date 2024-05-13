@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import styles from './styles.module.css';
 
 const WelcomePage = () => {
     return (
         <div className={styles.body}>
             <h1>WelcomePage</h1>
-            <button onClick={() => window.location.href = '/login'}>Login</button>
+            <Link to='/login'>Login</Link>
             <br />
-            <button onClick={() => window.location.href = '/register'}>Register</button>
+            <Link to='/register'>Register</Link>
         </div>
 
     )
