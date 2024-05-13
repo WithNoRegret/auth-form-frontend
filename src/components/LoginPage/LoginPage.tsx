@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 interface LoginPageProps {
     isLoggedIn: boolean;
@@ -43,7 +44,7 @@ const LoginPage = ({ setToken }: LoginPageProps) => {
                 <button type="submit">Login</button>
             </form>
             <p>Not a user?</p>
-            <button onClick={() => window.location.href = '/register'}>Register</button>
+            <Link to='/register'>Register</Link>
         </div>
 
     )
