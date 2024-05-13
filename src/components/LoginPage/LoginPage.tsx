@@ -28,6 +28,7 @@ const LoginPage = ({ setToken }: LoginPageProps) => {
                 if (res.ok) {
                     res.json().then(data => {
                         setToken(data.token);
+                        localStorage.setItem('token', data.token);
                     })
                 }
             })

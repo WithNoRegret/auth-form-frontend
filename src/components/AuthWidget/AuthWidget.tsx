@@ -29,15 +29,15 @@ const AuthWidget = () => {
     const router = createBrowserRouter([
         {
             path: '/',
-            element: isLoggedIn ? <ProfilePage /> : <WelcomePage />,
+            element: isLoggedIn ? <ProfilePage setIsLoggedIn={setIsLoggedIn} /> : <WelcomePage />,
         },
         {
             path: '/login',
-            element: isLoggedIn ? <ProfilePage /> : <LoginPage isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setToken={setToken} />,
+            element: isLoggedIn ? <ProfilePage setIsLoggedIn={setIsLoggedIn} /> : <LoginPage isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setToken={setToken} />,
         },
         {
             path: '/register',
-            element: isLoggedIn ? <ProfilePage /> : <RegistrationPage />,
+            element: isLoggedIn ? <ProfilePage setIsLoggedIn={setIsLoggedIn} /> : <RegistrationPage />,
         },
         {
             path: '*',
